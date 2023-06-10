@@ -3,6 +3,14 @@ const fetch = require("cross-fetch");
 const dateUtil = require("./dateUtil");
 const errors = require("./errors");
 
+/**
+ *
+ * @param {number} value
+ * @param {string} fromCurrency
+ * @param {string} toCurrency
+ * @param {Date} inputDate
+ * @returns {Promise<number>}
+ */
 const convertOnDate = async (value, fromCurrency, toCurrency, inputDate) => {
   if (
     typeof value !== "number" ||
@@ -45,6 +53,14 @@ const convertOnDate = async (value, fromCurrency, toCurrency, inputDate) => {
     });
 };
 
+/**
+ *
+ * @param {number} value
+ * @param {string} fromCurrency
+ * @param {string} toCurrency
+ * @param {Date} inputDate
+ * @returns {Promise<number>}
+ */
 const convert = async (value, fromCurrency, toCurrency) => {
   if (
     typeof value !== "number" ||

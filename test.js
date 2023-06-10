@@ -85,32 +85,31 @@ describe("convertOnDate", function () {
 describe("convert", function () {
   describe("#Valid Parameters", function () {
     it("Should return with no error when all parameters are valid", function () {
-      return expect(converter.convert(1, "sgd", "myr")).to.not
-        .be.rejected;
+      return expect(converter.convert(1, "sgd", "myr")).to.not.be.rejected;
     });
   });
 
   describe("#Invalid Parameters: value not a number", function () {
     it("Should throw invalid argument types error when value is not a number", function () {
-      return expect(
-        converter.convert("1", "sgd", "myr")
-      ).to.be.rejectedWith(errors.invalidArgumentTypesError);
+      return expect(converter.convert("1", "sgd", "myr")).to.be.rejectedWith(
+        errors.invalidArgumentTypesError
+      );
     });
   });
 
   describe("#Invalid Parameters: fromCurrency not a string", function () {
     it("Should throw invalid argument types error when fromCurrency is not a string", function () {
-      return expect(
-        converter.convert(1, 1, "myr")
-      ).to.be.rejectedWith(errors.invalidArgumentTypesError);
+      return expect(converter.convert(1, 1, "myr")).to.be.rejectedWith(
+        errors.invalidArgumentTypesError
+      );
     });
   });
 
   describe("#Invalid Parameters: toCurrency not a string", function () {
     it("Should throw invalid argument types error when toCurrency is not a string", function () {
-      return expect(
-        converter.convert(1, "sgd", 1)
-      ).to.be.rejectedWith(errors.invalidArgumentTypesError);
+      return expect(converter.convert(1, "sgd", 1)).to.be.rejectedWith(
+        errors.invalidArgumentTypesError
+      );
     });
   });
 });
