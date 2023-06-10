@@ -1,0 +1,31 @@
+{
+  "name": "currency-exchange",
+  "version": "1.0.0",
+  "description": "A light-weight currency converter module that fetches currency exchange rates daily",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BryannYeap/currency-exchange.git"
+  },
+  "keywords": [
+    "convert",
+    "converter",
+    "currency",
+    "exchange rates",
+    "exchange",
+    "money",
+    "rates"
+  ],
+  "author": "BryannYeap",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BryannYeap/currency-exchange/issues"
+  },
+  "homepage": "https://github.com/BryannYeap/currency-exchange#readme",
+  "dependencies": {
+    "cross-fetch": "^3.1.6"
+  }
+}
