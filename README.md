@@ -1,6 +1,4 @@
 # Currency Exchange
-<img src="https://github.com/BryannYeap/currency-exchange/assets/77266823/090da79e-3fe8-440e-a459-d1c3fd36f51a" width="150">
-
 A light-weight currency converter module that fetches exchange rates daily from [here](https://github.com/fawazahmed0/currency-api#readme).
 
 ## Getting Started
