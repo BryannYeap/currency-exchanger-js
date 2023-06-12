@@ -14,7 +14,7 @@ yarn add currency-exchanger-js
 ### Usage
 Import `currency-exchanger-js`.
 ```
-const converter = require('currency-exchange-js');
+const converter = require('currency-exchanger-js');
 ```
 Use the function you require. There are 2 available functions: `convertOnDate` and `convert`. 
 
