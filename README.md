@@ -1,17 +1,20 @@
-# Currency Exchange
+# Currency Exchanger JS
 A light-weight currency converter module that fetches exchange rates daily from [here](https://github.com/fawazahmed0/currency-api#readme).
 
 ## Getting Started
 ### Installation
-This package can be installed using `npm`.
+This package can be installed using `npm`
 ```
-npm install currency-exchange
+npm install currency-exchanger-js
 ```
-
+or `yarn`
+```
+yarn add currency-exchanger-js
+```
 ### Usage
-Import `currency-exchange`.
+Import `currency-exchanger-js`.
 ```
-const converter = require('currency-exchange');
+const converter = require('currency-exchange-js');
 ```
 Use the function you require. There are 2 available functions: `convertOnDate` and `convert`. 
 
@@ -71,10 +74,10 @@ Due to having dependencies on another repo, it faces the same limitations as tha
 * There could be a possibility of some dates being missing if the scripts from that repo messes up
 
 ## Issues
-If you find any issues, please report them ❗[here](https://github.com/BryannYeap/currency-exchange/issues)❗
+If you find any issues, please report them ❗[here](https://github.com/BryannYeap/currency-exchanger-js/issues)❗
 
 ## License
 This project is licensed under the [ISC](https://opensource.org/license/isc-license-txt/) license.
 
 ## Final Messages
-Please do star this repo by clicking on the ⭐ button at the top right of [this repo](https://github.com/BryannYeap/currency-exchange)!
+Please do star this repo by clicking on the ⭐ button at the top right of [this repo](https://github.com/BryannYeap/currency-exchanger-js)!
