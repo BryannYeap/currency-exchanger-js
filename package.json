@@ -1,5 +1,5 @@
 {
-  "name": "currency-exchange",
+  "name": "currency-exchanger-js",
   "version": "1.0.0",
   "description": "A light-weight currency converter module that fetches currency exchange rates daily",
   "main": "index.js",
