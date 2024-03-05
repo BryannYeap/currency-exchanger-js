@@ -1,4 +1,4 @@
-// API from https://github.com/fawazahmed0/currency-api#readme
+// API from https://github.com/fawazahmed0/exchange-api
 const fetch = require("cross-fetch");
 const dateUtil = require("./dateUtil");
 const errors = require("./errors");
@@ -35,19 +35,14 @@ const convertOnDate = async (value, fromCurrency, toCurrency, inputDate) => {
   fromCurrency = fromCurrency.trim().toLowerCase();
   toCurrency = toCurrency.trim().toLowerCase();
 
-  // Format date to YYYY-MM-DD
-  const formattedDate = inputDate.toISOString().split("T")[0];
-  const url = [
-    "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1",
-    formattedDate,
-    "currencies",
-    fromCurrency,
-    toCurrency,
-  ].join("/");
+  // Format date to YYYY.M.D
+  const formattedDate = dateUtil.formatDate(inputDate);
 
-  return await fetch(url + ".json")
+  return await fetch(
+    `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@${formattedDate}/v1/currencies/${fromCurrency}.json`
+  )
     .then((res) => res.json())
-    .then((data) => value * data[toCurrency])
+    .then((data) => value * data[fromCurrency][toCurrency])
     .catch((_) => {
       throw errors.fetchError;
     });
@@ -58,7 +53,6 @@ const convertOnDate = async (value, fromCurrency, toCurrency, inputDate) => {
  * @param {number} value
  * @param {string} fromCurrency
  * @param {string} toCurrency
- * @param {Date} inputDate
  * @returns {Promise<number>}
  */
 const convert = async (value, fromCurrency, toCurrency) => {
@@ -73,15 +67,11 @@ const convert = async (value, fromCurrency, toCurrency) => {
   fromCurrency = fromCurrency.trim().toLowerCase();
   toCurrency = toCurrency.trim().toLowerCase();
 
-  const url = [
-    "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies",
-    fromCurrency,
-    toCurrency,
-  ].join("/");
-
-  return await fetch(url + ".json")
+  return await fetch(
+    `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrency}.json`
+  )
     .then((res) => res.json())
-    .then((data) => value * data[toCurrency])
+    .then((data) => value * data[fromCurrency][toCurrency])
     .catch((_) => {
       throw errors.fetchError;
     });

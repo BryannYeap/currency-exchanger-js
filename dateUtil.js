@@ -16,4 +16,16 @@ function dateIsValid(date) {
   return date instanceof Date && !isNaN(date);
 }
 
-module.exports = { dateIsAfterToday, dateIsBeforeLastYear, dateIsValid };
+function formatDate(date) {
+  // const formattedDate = date.toJSON().substring(0, 10).replaceAll('-', '.');
+  // TODO: Migrated API does not work with historical API yet, so we use latest for now.
+  const formattedDate = "latest";
+  return formattedDate;
+}
+
+module.exports = {
+  dateIsAfterToday,
+  dateIsBeforeLastYear,
+  dateIsValid,
+  formatDate,
+};
