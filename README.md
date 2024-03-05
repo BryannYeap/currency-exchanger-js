@@ -1,6 +1,6 @@
 # Currency Exchanger JS
 
-A light-weight currency converter module that fetches exchange rates daily from [here](https://github.com/fawazahmed0/currency-api#readme).
+A light-weight currency converter module that fetches exchange rates daily from [here](https://github.com/fawazahmed0/exchange-api).
 
 ## Getting Started
 
@@ -83,7 +83,7 @@ converter.convert(5, "sgd", "myr").then((res) => {
 
 #### Currency
 
-For the currency strings (specifically `fromCurrency` and `toCurrency`), please refer to the keys of this JSON [here](https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies.min.json). These are internationally recognized currency acronyms.
+For the currency strings (specifically `fromCurrency` and `toCurrency`), please refer to the keys of this JSON [here](https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies.min.json). These are internationally recognized currency acronyms.
 
 ### Limitations
 
